@@ -55,11 +55,11 @@ public class Bulletin {
         System.out.println("Mention : " + calculerMention(moyenne));
     }
 
-    private static int calculerMoyenne(int total) {
-        return total / NB_NOTES + BONUS;
+     static int calculerMoyenne(int total) {
+        return  Math.round( (float)total / NB_NOTES) + BONUS;
     }
 
-    private static String calculerMention(int moyenne) {
+     static String calculerMention(int moyenne) {
         if (moyenne >= SEUIL_REUSSITE) {
             return "Réussite";
         }
